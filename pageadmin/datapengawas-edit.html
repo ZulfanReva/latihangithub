@@ -7,7 +7,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="../assets/foto/logo.png">
   <title>
-    Edit Data Dosen | E-Kinerja UMBJM
+    Edit Data Pengawas | E-Kinerja UMBJM
   </title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -51,7 +51,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="penilaianpk.html">
+            <a class="nav-link" href="berandaadmin.html">
                 <div class="bg-gradient-info icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                     <img src="../assets/foto/dashboard.png" alt="Government" width="30" height="30">
                 </div>
@@ -64,20 +64,20 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link active" href="#">
-              <div class="bg-gradient-info icon-shape shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-                <img src="../assets/foto/dosenaktif.png" alt="Government" width="50" height="50">
+          <a class="nav-link" href="datadosen.html">
+              <div class="bg-gradient-info icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                  <img src="../assets/foto/dosenaktif.png" alt="Government" width="30" height="30">
               </div>
               <span class="nav-link-text ms-1">Data Dosen</span>
-            </a>
-          </li>
+          </a>
+        </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="penilaianpk.html">
-              <div class="bg-gradient-info icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
-                  <img src="../assets/foto/profilpengawas.png" alt="Government" width="30" height="30">
-              </div>
-              <span class="nav-link-text ms-1">Data Pengawas</span>
+          <a class="nav-link active" href="#">
+            <div class="bg-gradient-info icon-shape shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+              <img src="../assets/foto/profilpengawas.png" alt="Government" width="50" height="50">
+            </div>
+            <span class="nav-link-text ms-1">Data Pengawas</span>
           </a>
         </li>
 
@@ -126,7 +126,7 @@
             <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark" href="javascript:;">Halaman</a></li>
             <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Beranda</li>
           </ol>
-          <h6 class="font-weight-bolder mb-0">Selamat Datang di halaman Edit Data Dosen</h6>
+          <h6 class="font-weight-bolder mb-0">Selamat Datang di halaman Edit Data Pengawas</h6>
         </nav>
         <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
           <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -168,7 +168,7 @@
         <div class="col-12">
           <div class="card mb-4">
             <div class="card-header pb-0">
-              <h6>Edit Data Dosen</h6>
+              <h6>Edit Data Pengawas</h6>
             </div>
             <div class="card-body px-0 pt-0 pb-2">
               <div class="p-4">
@@ -180,33 +180,30 @@
                         <!-- Input Nama -->
                         <div class="col-md-3 mb-3">
                           <label for="nama" class="form-label">Nama</label>
-                          <input type="text" id="nama" class="form-control" placeholder="Masukkan Nama">
+                          <input type="text" id="nama" class="form-control" placeholder="Masukkan Nama Pengawas" required>
                         </div>
     
-                        <!-- Input NIDN -->
+                        <!-- Dropdown Jabatan -->
                         <div class="col-md-3 mb-3">
-                          <label for="nidn" class="form-label">NIDN</label>
-                          <input type="text" id="nidn" class="form-control" placeholder="Masukkan NIDN">
-                        </div>
-    
-                        <!-- Dropdown Prodi -->
-                        <div class="col-md-3 mb-3">
-                          <label for="prodi" class="form-label">Prodi</label>
-                          <select id="prodi" class="form-select">
-                            <option selected>Pilih Prodi</option>
-                            <option value="1">Prodi 1</option>
-                            <option value="2">Prodi 2</option>
-                            <option value="3">Prodi 3</option>
+                          <label for="jabatan" class="form-label">Jabatan</label>
+                          <select id="jabatan" class="form-select" required>
+                            <option disabled>Pilih Jabatan</option>
+                            <option value="Koordinator" selected>Koordinator</option> <!-- Example pre-selected -->
+                            <option value="Supervisor">Supervisor</option>
+                            <option value="Staff Administrasi">Staff Administrasi</option>
                           </select>
                         </div>
     
-                        <!-- Dropdown Status -->
+                        <!-- Input Nama Pengguna -->
                         <div class="col-md-3 mb-3">
-                          <label for="status" class="form-label">Status</label>
-                          <select id="status" class="form-select">
-                            <option selected>Aktif</option>
-                            <option value="nonaktif">Nonaktif</option>
-                          </select>
+                          <label for="namaPengguna" class="form-label">Nama Pengguna</label>
+                          <input type="text" id="namaPengguna" class="form-control" placeholder="Masukkan Nama Pengguna" required>
+                        </div>
+    
+                        <!-- Input Kata Sandi -->
+                        <div class="col-md-3 mb-3">
+                          <label for="kataSandi" class="form-label">Kata Sandi</label>
+                          <input type="password" id="kataSandi" class="form-control" placeholder="Masukkan Kata Sandi" required>
                         </div>
                       </div>
                     </div>
@@ -217,11 +214,10 @@
                     <button type="submit" class="btn bg-gradient-info" id="saveButton">Simpan</button>
                     
                     <!-- Tombol Kembali -->
-                    <button type="button" class="btn btn-outline-secondary" onclick="window.location.href='datadosen.html'">
+                    <button type="button" class="btn btn-outline-secondary" onclick="window.location.href='datapengawas.html'">
                       Kembali
                     </button>
                   </div>
-
                 </form>
               </div>
             </div>
@@ -235,8 +231,8 @@
       document.getElementById('formContainer').addEventListener('submit', function(event) {
         event.preventDefault(); // Mencegah form disubmit secara default
     
-        // Redirection ke halaman sebelumnya (datadosen.html)
-        window.location.href = "datadosen.html";
+        // Redirection ke halaman sebelumnya (datapengawas.html)
+        window.location.href = "datapengawas.html";
       });
     </script>
     

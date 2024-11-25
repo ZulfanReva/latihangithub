@@ -54,7 +54,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="penilaianpk.html">
+            <a class="nav-link" href="berandaadmin.html">
                 <div class="bg-gradient-info icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                     <img src="../assets/foto/dashboard.png" alt="Government" width="30" height="30">
                 </div>
@@ -76,7 +76,7 @@
           </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="penilaianpk.html">
+          <a class="nav-link" href="datapengawas.html">
               <div class="bg-gradient-info icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                   <img src="../assets/foto/profilpengawas.png" alt="Government" width="30" height="30">
               </div>
@@ -167,108 +167,138 @@
     <!-- End Navbar -->
 
     <div class="container-fluid py-4">
-      <div class="row">
-        <div class="col-12">
-          <div class="card mb-4">
-            <!-- Header dengan tombol Tambah Data -->
-            <div class="card-header pb-0 d-flex justify-content-between align-items-center">
-              <h6 class="mb-0">Tabel Data Dosen</h6>
-              <a href="datadosen-tambah.html" class="btn btn-sm bg-gradient-info btn-sm mb-0">Tambah Data</a>
-            </div>
-            <div class="card-body px-0 pt-0 pb-2">
-              <div class="table-responsive p-0">
-                <table class="table align-items-center mb-0">
-                  <thead>
-                    <tr>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 text-start">Nama</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2 text-start">NIDN</th>
-                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 text-start">Prodi</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Aksi</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <!-- Baris 1 -->
-                    <tr>
-                      <td class="text-start">
-                        <div class="d-flex px-2 py-1">
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Nama 1</h6>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="text-start">
-                        <p class="text-xs font-weight-bold mb-0">123456</p>
-                      </td>
-                      <td class="text-start">
-                        <p class="text-xs font-weight-bold mb-0">Prodi 1</p>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="badge bg-gradient-success btn-sm mb-0">Aktif</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <button class="btn btn-sm bg-gradient-info me-2" onclick="editData(1)">
-                          <i class="fa fa-edit fa-xs"></i>
-                        </button>
-                        <button class="btn btn-sm bg-gradient-danger me-2" onclick="hapusData(1)">
-                          <i class="fa fa-trash fa-xs"></i>
-                        </button>
-                      </td>
-                    </tr>
-                    <!-- Baris 2 -->
-                    <tr>
-                      <td class="text-start">
-                        <div class="d-flex px-2 py-1">
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">Nama 2</h6>
-                          </div>
-                        </div>
-                      </td>
-                      <td class="text-start">
-                        <p class="text-xs font-weight-bold mb-0">789012</p>
-                      </td>
-                      <td class="text-start">
-                        <p class="text-xs font-weight-bold mb-0">Prodi 2</p>
-                      </td>
-                      <td class="align-middle text-center text-sm">
-                        <span class="badge bg-gradient-danger btn-sm mb-0">Nonaktif</span>
-                      </td>
-                      <td class="align-middle text-center">
-                        <button class="btn btn-sm bg-gradient-info me-2" onclick="editData(2)">
-                          <i class="fa fa-edit fa-xs"></i>
-                        </button>
-                        <button class="btn btn-sm bg-gradient-danger me-2" onclick="hapusData(2)">
-                          <i class="fa fa-trash fa-xs"></i>
-                        </button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="card mb-4">
+        <!-- Header dengan tombol Tambah Data -->
+        <div class="card-header pb-0 d-flex justify-content-between align-items-center">
+          <h6 class="mb-0">Tabel Data Dosen</h6>
+          <a href="datadosen-tambah.html" class="btn btn-sm bg-gradient-info btn-sm mb-0">Tambah Data</a>
         </div>
-      </div>
-    
-      <!-- Modal Konfirmasi Hapus -->
-      <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="confirmDeleteModalLabel">Konfirmasi Penghapusan</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              Apakah Anda yakin ingin menghapus data dosen ini?
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
-              <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Ya</button>
-            </div>
+        <div class="card-body px-0 pt-0 pb-2">
+          <div class="table-responsive p-0">
+            <table class="table align-items-center mb-0">
+              <thead>
+                <tr>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 text-start">Nama</th>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2 text-start">NIDN</th>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 text-start">Prodi</th>
+                  <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status</th>
+                  <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Baris 1 -->
+                <tr>
+                  <td class="text-start">
+                    <div class="d-flex px-2 py-1">
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="mb-0 text-sm">Nama 1</h6>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-start">
+                    <p class="text-xs font-weight-bold mb-0">123456</p>
+                  </td>
+                  <td class="text-start">
+                    <p class="text-xs font-weight-bold mb-0">Prodi 1</p>
+                  </td>
+                  <td class="align-middle text-center text-sm">
+                    <span class="badge bg-gradient-success btn-sm mb-0">Aktif</span>
+                  </td>
+                  <td class="align-middle text-center">
+                    <button 
+                      class="btn btn-sm bg-gradient-info me-2" 
+                      onclick="window.location.href='datadosen-edit.html'">
+                      <i class="fa fa-edit fa-xs"></i>
+                    </button>
+                    <button 
+                      class="btn btn-sm bg-gradient-danger me-2" 
+                      onclick="hapusData(1)">
+                      <i class="fa fa-trash fa-xs"></i>
+                    </button>
+                  </td>
+                </tr>
+                <!-- Baris 2 -->
+                <tr>
+                  <td class="text-start">
+                    <div class="d-flex px-2 py-1">
+                      <div class="d-flex flex-column justify-content-center">
+                        <h6 class="mb-0 text-sm">Nama 2</h6>
+                      </div>
+                    </div>
+                  </td>
+                  <td class="text-start">
+                    <p class="text-xs font-weight-bold mb-0">789012</p>
+                  </td>
+                  <td class="text-start">
+                    <p class="text-xs font-weight-bold mb-0">Prodi 2</p>
+                  </td>
+                  <td class="align-middle text-center text-sm">
+                    <span class="badge bg-gradient-danger btn-sm mb-0">Nonaktif</span>
+                  </td>
+                  <td class="align-middle text-center">
+                    <button class="btn btn-sm bg-gradient-info me-2" onclick="window.location.href='datadosen-edit.html'">
+                      <i class="fa fa-edit fa-xs"></i>
+                    </button>
+                    <button class="btn btn-sm bg-gradient-danger me-2" onclick="hapusData(2)">
+                      <i class="fa fa-trash fa-xs"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- Modal Konfirmasi Hapus -->
+  <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="confirmDeleteModalLabel">Konfirmasi Penghapusan</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Apakah Anda yakin ingin menghapus data dosen ini?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tidak</button>
+          <button type="button" class="btn btn-danger" id="confirmDeleteBtn">Ya</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  let selectedDataId = null;
+
+  // Fungsi untuk menampilkan modal konfirmasi
+  function hapusData(id) {
+    selectedDataId = id; // Menyimpan ID data yang akan dihapus
+    const modal = new bootstrap.Modal(document.getElementById('confirmDeleteModal')); // Inisialisasi modal
+    modal.show(); // Menampilkan modal
+  }
+
+  // Menangani klik tombol "Ya" pada modal
+  document.getElementById('confirmDeleteBtn').addEventListener('click', function () {
+    const dataId = selectedDataId; // Mengambil ID data yang dipilih
+
+    // Logika penghapusan data bisa ditambahkan di sini (misalnya melalui AJAX)
+    alert("Data dengan ID " + dataId + " berhasil dihapus.");
+    
+    // Menutup modal
+    const modal = bootstrap.Modal.getInstance(document.getElementById('confirmDeleteModal'));
+    modal.hide();
+
+    // Redirect atau perbarui halaman
+    window.location.href = "datadosen.html"; // Atau sesuaikan dengan kebutuhan
+  });
+</script>
     
     <!-- Footer -->
     <footer class="footer pt-3">
@@ -282,45 +312,6 @@
         </div>
       </div>
     </footer>
-    
-    <script>
-      // Fungsi untuk menampilkan modal konfirmasi
-      function hapusData(id) {
-        // Menyimpan ID data yang akan dihapus
-        window.selectedDataId = id;
-    
-        // Menampilkan modal
-        $('#confirmDeleteModal').modal('show');
-      }
-    
-      // Menangani klik tombol "Ya" pada modal
-      document.getElementById('confirmDeleteBtn').addEventListener('click', function() {
-        const dataId = window.selectedDataId;  // Mendapatkan ID data yang dipilih
-    
-        // Logika untuk menghapus data, bisa menggunakan AJAX atau memanipulasi DOM
-        alert("Data dengan ID " + dataId + " berhasil dihapus.");
-    
-        // Menutup modal
-        $('#confirmDeleteModal').modal('hide');
-    
-        // Mengembalikan ke halaman sebelumnya
-        window.location.href = "datadosen.html";
-      });
-    </script>    
-      
-    <script>
-      function editData(id) {
-        alert("Edit data dengan ID: " + id);
-        // Logika edit data
-      }
-    
-      function hapusData(id) {
-        if (confirm("Apakah Anda yakin ingin menghapus data dengan ID: " + id + "?")) {
-          alert("Data dengan ID " + id + " berhasil dihapus.");
-          // Logika hapus data
-        }
-      }
-    </script>
     
   </main>
 
